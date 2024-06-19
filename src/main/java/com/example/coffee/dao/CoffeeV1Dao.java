@@ -10,6 +10,4 @@ public interface CoffeeV1Dao {
 
 	List<Map<String, String>> doCoffeeList();
 
-    // List<Map<String, String>> doCoffeeList();
-
 }

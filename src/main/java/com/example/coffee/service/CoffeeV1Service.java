@@ -16,6 +16,9 @@ public class CoffeeV1Service {
 
     public List<Map<String, String>> doCoffeeList() {
         List<Map<String, String>> list = v1Dao.doCoffeeList();
+
+        // System.out.println("list");
+
         return list;
     }
     

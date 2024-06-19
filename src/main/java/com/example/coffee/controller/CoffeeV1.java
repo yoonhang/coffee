@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,13 +20,16 @@ public class CoffeeV1 {
 
 
     @GetMapping("/coffee")
-    public String doCoffee() {
+    public String doCoffee(Model model) {
 
 
         List<Map<String, String>> list = v1Service.doCoffeeList();
 
+        model.addAttribute("coffeeList", list);
+
+
         System.out.println("list");
-        
+
         return "/v1/coffee";
 
     }
